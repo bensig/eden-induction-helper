@@ -27,12 +27,15 @@ class MyForm extends React.Component {
   };
 
   render() {
-    var style = {
+    var formStyle = {
       margin: '25px'
+    };
+    var instructionStyle = {
+      fontStyle: 'italic'
     };
 
     return (
-      <form style={style}>
+      <form style={formStyle}>
         <h1>Eden 🍏 Induction Helper</h1>
         <h2>Instructions</h2>
         <ol>
@@ -86,12 +89,13 @@ class MyForm extends React.Component {
           {this.state.inductee}, have you read and understood the Eden Peace
           Treaty?
         </p>
-        <p>
+        <p style={instructionStyle}>
+          {' '}
           ({this.state.inductee} confirms or declines - If they say no, then you
           can stop here.)
         </p>
         <p>{this.state.inductee} do you agree to abide by the Peace Treaty?</p>
-        <p>
+        <p style={instructionStyle}>
           ({this.state.inductee} confirms or declines - if they say no, then you
           can stop here.)
         </p>
@@ -99,7 +103,7 @@ class MyForm extends React.Component {
           {this.state.witness1}, do you believe {this.state.inductee}{' '}
           understands and will abide by the Peace Treaty?
         </p>
-        <p>
+        <p style={instructionStyle}>
           ({this.state.witness1} confirms or declines - if they say no, then you
           can stop here.)
         </p>
@@ -107,7 +111,7 @@ class MyForm extends React.Component {
           {this.state.witness2} do you believe {this.state.inductee} understands
           and will abide by the Peace Treaty?
         </p>
-        <p class="italic">
+        <p style={instructionStyle}>
           ({this.state.witness2} confirms or declines - - if they say no, then
           you can stop here.)
         </p>
@@ -116,7 +120,7 @@ class MyForm extends React.Component {
           abide by it.
         </p>
         <p>{this.state.inductee}, welcome to the Eden!</p>
-        <p>(You can stop recording now.)</p>
+        <p style={instructionStyle}>(You can stop recording now.)</p>
       </form>
     );
   }
