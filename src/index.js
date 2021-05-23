@@ -27,8 +27,12 @@ class MyForm extends React.Component {
   };
 
   render() {
+    var style = {
+      margin: '25px'
+    };
+
     return (
-      <form>
+      <form style={style}>
         <h1>Eden 🍏 Induction Helper</h1>
         <h2>Instructions</h2>
         <ol>
@@ -56,19 +60,17 @@ class MyForm extends React.Component {
           </li>
         </ol>
         <p>
-          Enter name of inductee:
-          <input type="text" onChange={this.inductee} />
+          Enter name of inductee: <input type="text" onChange={this.inductee} />
         </p>
         <p>
-          Enter name of inductor:
-          <input type="text" onChange={this.inductor} />
+          Enter name of inductor: <input type="text" onChange={this.inductor} />
         </p>
         <p>
-          Enter name of witness 1:
+          Enter name of witness 1:{' '}
           <input type="text" onChange={this.witness1} />
         </p>
         <p>
-          Enter name of witness 2:
+          Enter name of witness 2:{' '}
           <input type="text" onChange={this.witness2} />
         </p>
 
